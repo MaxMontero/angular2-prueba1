@@ -1,0 +1,18 @@
+<h1>{{heroe.nombre | uppercase}}<small>{{heroe.aparicion | date:'y'}}</small></h1>
+<hr>
+<div class="row" >
+  <div class="col-md-4">
+    <img [src]="heroe.img" class="img-fluid" alt="">
+    <br><br>
+    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-md-8">
+    <h3>{{heroe.nombre}}</h3>
+    <hr>
+    <p>{{heroe.bio}}</p>
+    <div class="">
+      <img *ngIf="heroe.casa=='DC'" src="https://lh3.googleusercontent.com/Y2SA5JVIBOkS3TBgP1HzI3MWncZbaiN3RkFZbjWr5YN1FySnB_DZsPz50JVLL3CjVw=w300" alt="">
+      <img *ngIf="heroe.casa=='Marvel'" src="http://i.annihil.us/u/prod/marvel/html_pages_assets/mmc-landing/images/promo-logo-85c5b3ffb6.png" alt="">
+    </div>
+  </div>
+</div>
